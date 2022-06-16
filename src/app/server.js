@@ -4,7 +4,7 @@ const app = express();
 
 app.use('/',
   express.static(
-  resolve(
+  resolve( 
     __dirname,
     './build'
       )
@@ -13,7 +13,7 @@ app.use('/',
 
 app.listen(process.env.PORT || 3000, (err) => {
   if (err) {
-    console.log(err);
+    return console.log(err);
   }
   console.log('Server is running on port 3000');
 })
